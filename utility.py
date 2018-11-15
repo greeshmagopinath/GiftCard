@@ -1,6 +1,7 @@
 class Utility(object):
     """ Class with static helper methods"""
 
+    @staticmethod
     def read_file(filename):
         '''
         Reads a file with keys and values and converts to an array
@@ -12,8 +13,6 @@ class Utility(object):
         lines = content.readlines()
         arr = []
         for line in lines:
-            #convert into type
-            # add to array
             item,value = line.strip('\n').split(',')
             arr.append([item,int(value)])
         return arr

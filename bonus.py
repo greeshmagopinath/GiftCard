@@ -5,7 +5,7 @@ from utility import Utility
 
 def bonus(arr, target):
     '''
-    prints 2 items whose prices sum up to target
+    prints 3 items whose prices sum up to target
     :param arr: an array containing tuples(item,value)
     :param target: integer
     :return:
