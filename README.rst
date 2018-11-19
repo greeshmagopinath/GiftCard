@@ -73,8 +73,8 @@ The space complexity is still O(n). No extra storage space is required.
 
 Note:
 For this particular solution, I considered the space complexity as O(n) because we are loading
-data from the hard disk to a data structure in RAM. As the file size grows further optimizations
-should be considered.
+data from the hard disk to a data structure(array) in RAM. However by reading from the file in
+batches the space complexity could be made constant O(1).
 
 =============
 Running Tests
