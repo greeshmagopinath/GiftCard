@@ -71,6 +71,10 @@ to the target amongst items scanned so far.
 Since scanning of the array is done for each element the time complexity is O(n^2).
 The space complexity is still O(n). No extra storage space is required.
 
+Note:
+For this particular solution, I considered the space complexity as O(n) because we are loading
+data from the hard disk to a data structure in RAM. As the file size grows further optimizations
+should be considered.
 
 =============
 Running Tests
