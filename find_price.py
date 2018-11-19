@@ -21,7 +21,7 @@ def find_price(arr, target):
         if sum == target:
             print(str(arr[left][0]) + " " + str(arr[left][1]) + ", " + str(arr[right][0]) + " " + str(arr[right][1]))
             return
-        elif sum < target:
+        if sum < target:
             if closest_l:
                 if sum > closest_l[1]+closest_r[1]:
                     closest_l, closest_r = arr[left], arr[right]
@@ -34,7 +34,6 @@ def find_price(arr, target):
         print(str(closest_l[0]) + " " + str(closest_l[1]) + ", " + str(closest_r[0]) + " " + str(closest_r[1]))
         return
     print("Not possible")
-    return
 
 
 def main(argv):
