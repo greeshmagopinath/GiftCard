@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import sys
 import argparse
-from utility import Utility
+import utility
 
 def find_price(arr, target):
     '''
@@ -45,7 +45,7 @@ def main(argv):
     parser.add_argument('filename', type=str, help='name of file containing items and prices')
     parser.add_argument('target', type=int, help='amount available in gift card')
     args = parser.parse_args()
-    find_price(Utility.read_file(args.filename),args.target)
+    find_price(utility.read_file(args.filename),args.target)
 
 if __name__ == "__main__":
     main(sys.argv[:])

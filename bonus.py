@@ -1,11 +1,13 @@
 #!/usr/bin/env python
 import sys
 import argparse
-from utility import Utility
+import utility
 
 def bonus(arr, target):
     '''
     prints 3 items whose prices sum up to target
+    todo:
+     * modularize find_price and bonus.py
     :param arr: an array containing tuples(item,value)
     :param target: integer
     :return:
@@ -47,7 +49,7 @@ def main(argv):
     parser.add_argument('filename', type=str, help='name of file containing items and prices')
     parser.add_argument('target', type=int, help='amount available in gift card')
     args = parser.parse_args()
-    bonus(Utility.read_file(args.filename),args.target)
+    bonus(utility.read_file(args.filename),args.target)
 
 if __name__ == "__main__":
     main(sys.argv[:])
